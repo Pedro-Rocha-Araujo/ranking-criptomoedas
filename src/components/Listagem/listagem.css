@@ -1,0 +1,8 @@
+table {
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  color: #fff;
+  background-color: #111;
+  margin: auto;
+  width: 96%;
+  max-width: 720px;
+}
