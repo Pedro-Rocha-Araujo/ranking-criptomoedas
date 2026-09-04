@@ -10,5 +10,5 @@
 * Consumo de API 
 * Abordagem Mobile-first (100% Responsivo)
 ### Links 
-* Deploy:
-* API uti lizada:
+* <strong>Deploy:</strong> 
+* <strong>API uti lizada:</strong> 
