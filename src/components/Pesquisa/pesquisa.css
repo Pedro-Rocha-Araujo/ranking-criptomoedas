@@ -1,0 +1,24 @@
+form {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  width: 96%;
+  max-width: 720px;
+}
+
+form input, form button {
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  border: none;
+  outline: none;
+}
+
+form input {
+  padding: 0 0.6rem;
+  height: 2.5rem;
+  width: 100%;
+}
+
+form button {
+  width: 2.5rem;
+}
