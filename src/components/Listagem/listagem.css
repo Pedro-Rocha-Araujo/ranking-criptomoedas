@@ -1,8 +1,23 @@
 table {
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: clamp(0.9rem, 3vw, 1.05rem);
   color: #fff;
   background-color: #111;
-  margin: auto;
+  margin: 1rem auto 0 auto;
   width: 96%;
-  max-width: 720px;
+  max-width: 780px;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #fff;
+}
+
+thead {
+  background-color: #fff;
+  color: #111;
+  text-transform: uppercase;
+}
+
+td, th {
+  padding: 0.6rem;
 }
