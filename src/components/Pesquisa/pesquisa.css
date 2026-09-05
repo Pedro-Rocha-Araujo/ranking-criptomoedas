@@ -3,7 +3,7 @@ form {
   display: flex;
   justify-content: center;
   width: 96%;
-  max-width: 780px;
+  max-width: 920px;
 }
 
 form input, form button {
