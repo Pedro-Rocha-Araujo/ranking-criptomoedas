@@ -20,7 +20,7 @@ export default function Listagem() {
           <td data-label="Valor de Mercado">Valor no Mercado</td>
           <td data-label="Preço">R$ 50,00</td>
           <td data-label="Volume">300</td>
-          <td data-label="24h">-200</td>
+          <td data-label="24h" className="positivo">+200</td>
         </tr>
 
         <tr>
@@ -28,7 +28,7 @@ export default function Listagem() {
           <td data-label="Valor de Mercado">Valor no Mercado</td>
           <td data-label="Preço">R$ 50,00</td>
           <td data-label="Volume">300</td>
-          <td data-label="24h">-200</td>
+          <td data-label="24h" className="negativo">-200</td>
         </tr>
       </tbody>
 

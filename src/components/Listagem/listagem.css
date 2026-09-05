@@ -23,6 +23,14 @@ td, th {
   padding: 0.6rem;
 }
 
+.positivo {
+  color: #4f4;
+}
+
+.negativo {
+  color: #f55;
+}
+
 @media screen and (max-width: 620px) {
   thead {
     display: none;
@@ -36,12 +44,14 @@ td, th {
 
   tr {
     border-radius: 0.5rem;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     border: 1px solid #fff;
   }
 
   td::before {
+    color: #fff;
     content: attr(data-label);
     float: left;
     text-transform: uppercase;
