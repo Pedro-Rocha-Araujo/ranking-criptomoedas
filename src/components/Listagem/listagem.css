@@ -1,4 +1,6 @@
 table {
+  border-radius: 0.5rem 0.5rem 0 0;
+  overflow: hidden;
   text-align: center;
   font-size: clamp(0.9rem, 3vw, 1.05rem);
   color: #fff;
@@ -11,7 +13,7 @@ table {
 }
 
 tr {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff70;
 }
 
 thead {
@@ -48,7 +50,7 @@ td, th {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid #fff;
+    border: 1px solid #ffffffa6;
   }
 
   td::before {
@@ -60,7 +62,8 @@ td, th {
   }
 
   tr td {
-    border-bottom: 1px solid #ffffffb0;
+    border-bottom: 1px solid #ffffff6e;
     text-align: right;
+    padding: 0.5rem;
   }
 }
