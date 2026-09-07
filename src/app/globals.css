@@ -14,6 +14,7 @@ body {
   width: 100%;
   min-height: 100dvh;
   background: linear-gradient(#111111ef, #000000ec), url("/background.jpeg");
+  backdrop-filter: blur(2px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat
