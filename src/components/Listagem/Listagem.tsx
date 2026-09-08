@@ -1,6 +1,11 @@
 import "./listagem.css"
+import { Cripto } from "@/interfaces"
 
-export default function Listagem() {
+interface ListagemProps {
+  lista?: Cripto[]
+}
+
+export default function Listagem({ lista }: ListagemProps) {
   return (
     <table>
 
@@ -15,21 +20,21 @@ export default function Listagem() {
       </thead>
 
       <tbody>
-        <tr>
-          <td data-label="Moeda">Bitcoin</td>
-          <td data-label="Valor de Mercado">Valor no Mercado</td>
-          <td data-label="Preço">R$ 50,00</td>
-          <td data-label="Volume">300</td>
-          <td data-label="24h" className="positivo">+200</td>
-        </tr>
 
-        <tr>
-          <td data-label="Moeda">Bitcoin</td>
-          <td data-label="Valor de Mercado">Valor no Mercado</td>
-          <td data-label="Preço">R$ 50,00</td>
-          <td data-label="Volume">300</td>
-          <td data-label="24h" className="negativo">-200</td>
-        </tr>
+        { lista?.map((item)=> {
+          return (
+            <tr key={item.id}>
+              <td data-label="Moeda">{item.name}</td>
+              <td data-label="Valor de Mercado">Valor no Mercado</td>
+              <td data-label="Preço">U$ {Number(item.priceUsd).toFixed(2)}</td>
+              <td data-label="Volume">300</td>
+              <td data-label="24h" className="positivo negativo">
+                {Number(item.changePercent24Hr).toFixed(2)}
+              </td>
+            </tr>
+          )
+        }) }
+
       </tbody>
 
     </table>
