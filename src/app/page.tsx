@@ -9,6 +9,7 @@ import { Cripto } from "@/interfaces";
 
 export default function Home() {
   const [lista, setLista] = useState<Cripto[]>()
+  const [limite, setLismite] = useState<number>(5)
 
   useEffect(()=> {
     async function getItens() {
@@ -16,7 +17,7 @@ export default function Home() {
       if(!chave) {
         return
       }
-      const response = await axios.get(`https://rest.coincap.io/v3/assets?limit=10&offset=0&apiKey=${chave}`)
+      const response = await axios.get(`https://rest.coincap.io/v3/assets?limit=${limite}&offset=0&apiKey=${chave}`)
       setLista(response.data.data)
     }
     getItens()
