@@ -2,7 +2,7 @@ export interface Cripto {
   id: string,
   name: string,
   rank: string,
-  valor: number,
+  marketCapUsd: string,
   changePercent24Hr: string,
   priceUsd: string
 }
