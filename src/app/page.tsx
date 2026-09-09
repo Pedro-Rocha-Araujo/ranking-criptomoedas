@@ -9,7 +9,7 @@ import { Cripto } from "@/interfaces";
 
 export default function Home() {
   const [lista, setLista] = useState<Cripto[]>()
-  const [limite, setLismite] = useState<number>(5)
+  const [limite, setLimite] = useState<number>(5)
 
   useEffect(()=> {
     async function getItens() {
@@ -21,12 +21,28 @@ export default function Home() {
       setLista(response.data.data)
     }
     getItens()
-  }, [])
+  }, [limite])
+
+  function aumentarLimite() {
+    setLimite(limite + 5)
+  }
+
+  function diminuirLimite() {
+    setLimite(limite - 5)
+  }
 
   return (
     <>
       <Pesquisa />
       <Listagem lista={lista} />
-    </>
+      <div className="container">
+        { limite >= 5 && (
+          <button onClick={diminuirLimite} >Ver menos</button>
+        ) }
+        { limite <= 15 && (
+          <button onClick={aumentarLimite}>Ver mais</button>
+        ) } 
+      </div>
+    </> 
   );
 }

@@ -61,3 +61,26 @@ section.not-found button:hover {
   color: #111;
   background-color: #fff;
 }
+
+div.container {
+  margin: 1rem auto;
+  width: 96%;
+  max-width: 920px;
+  display: flex;
+  gap: 0.8rem;
+}
+
+div.container button {
+  font-size: clamp(0.9rem, 4vw, 1rem);
+  padding: 0.5rem 1.4rem;
+  border-radius: 2rem;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+div.container button:hover {
+  color: #000;
+  background-color: #fff;
+}
