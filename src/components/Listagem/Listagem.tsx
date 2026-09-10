@@ -33,7 +33,7 @@ export default function Listagem({ lista }: ListagemProps) {
     <>
 
       { card && (
-        <Card fecharCard={fecharCard} />
+        <Card cripto={card} fecharCard={fecharCard} />
       ) }
 
       <table>

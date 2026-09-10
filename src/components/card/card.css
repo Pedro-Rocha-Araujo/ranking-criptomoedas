@@ -1,0 +1,40 @@
+div.background {
+  background-color: #000000c7;
+  width: 100%;
+  min-height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.card {
+  background-color: #1a1919;
+  width: 96%;
+  max-width: 420px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+div.infos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.card button {
+  font-size: clamp(0.9rem, 4vw, 1rem);
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+  background-color: #d22;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+div.card button:hover {
+  background-color: #d33;
+}

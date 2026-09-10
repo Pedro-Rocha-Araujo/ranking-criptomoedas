@@ -32,10 +32,15 @@ td, th {
 }
 
 div.imagem-texto {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.2rem;
+}
+
+div.imagem-texto:hover {
+  text-decoration: underline;
 }
 
 .positivo {
