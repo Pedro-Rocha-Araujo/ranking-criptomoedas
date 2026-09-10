@@ -12,6 +12,7 @@ div.background {
 }
 
 div.card {
+  color: #fff;
   background-color: #1a1919;
   width: 96%;
   max-width: 420px;
@@ -19,10 +20,21 @@ div.card {
   padding: 1rem;
 }
 
-div.infos {
+div.header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+div.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0.4rem 0;
+}
+
+div.card span {
+  font-size: clamp(0.9rem, 4vw, 1.05rem);
 }
 
 div.card button {
