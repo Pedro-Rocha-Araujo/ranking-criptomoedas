@@ -32,7 +32,12 @@ export default function Listagem({ lista }: ListagemProps) {
         { lista?.map((item)=> {
           return (
             <tr key={item.id}>
-              <td data-label="Moeda">{item.name}</td>
+              <td data-label="Moeda">
+                <div className="imagem-texto"> 
+                  <img src={`https://assets.coincap.io/assets/icons/${item.symbol.toLowerCase()}@2x.png`} /> 
+                  {item.name}
+                </div>
+              </td>
               <td data-label="Valor de Mercado">{formatacaoMenor.format(Number(item.marketCapUsd))}</td>
               <td data-label="Preço">{formatacao.format(Number(item.priceUsd))}</td>
               <td data-label="24h" className={Number(item.changePercent24Hr) > 0 ? "positivo" : "negativo" }>

@@ -4,5 +4,6 @@ export interface Cripto {
   rank: string,
   marketCapUsd: string,
   changePercent24Hr: string,
-  priceUsd: string
+  priceUsd: string,
+  symbol: string
 }

@@ -16,7 +16,12 @@ tr {
   border-bottom: 1px solid #ffffff70;
 }
 
+tr img {
+  width: 2rem;
+}
+
 thead {
+  font-size: 1.1rem;
   background-color: #302f2f;
   color: #fff;
   text-transform: uppercase;
@@ -24,6 +29,13 @@ thead {
 
 td, th {
   padding: 0.6rem;
+}
+
+div.imagem-texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .positivo {
@@ -65,5 +77,9 @@ td, th {
     border-bottom: 1px solid #ffffff6e;
     text-align: right;
     padding: 0.5rem;
+  }
+
+  div.imagem-texto {
+    justify-content: right;
   }
 }
