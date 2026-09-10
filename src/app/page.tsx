@@ -10,7 +10,7 @@ import { Cripto } from "@/interfaces";
 export default function Home() {
   const [lista, setLista] = useState<Cripto[]>()
   const [limite, setLimite] = useState<number>(5)
-  console.log(lista)
+
   useEffect(()=> {
     async function getItens() {
       const chave = "531b61da81421169d435c716beb34667804fb6c31b9f824251e3f2c370931786"
