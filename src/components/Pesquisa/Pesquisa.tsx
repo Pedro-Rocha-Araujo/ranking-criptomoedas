@@ -1,22 +1,19 @@
-'use client'
-
-import { useState } from "react"
 import "./pesquisa.css"
 
-export default function Pesquisa() {
-  const [pesquisa, setPesquisa] = useState<string>("")
+interface PesquisaProps {
+  pesquisa: string,
+  setPesquisa: (pesquisa: string) => void
+}
 
-  function pesquisar(e:React.FormEvent) {
-    e.preventDefault()
-    alert(pesquisa + " pesquisada")
-  }
+export default function Pesquisa({ pesquisa, setPesquisa }: PesquisaProps) {
 
   return (
-    <form onSubmit={pesquisar}>
+    <form>
       <input  
         type="text"
         placeholder="Digite o nome da criptomoeda"
         required
+        value={pesquisa}
         onChange={(e)=>setPesquisa(e.target.value)}
       />
       <button>

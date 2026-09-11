@@ -9,7 +9,9 @@ import { Cripto } from "@/interfaces";
 
 export default function Home() {
   const [lista, setLista] = useState<Cripto[]>()
+  const [listaMostrada, setListaMostrada] = useState<Cripto[]>()
   const [limite, setLimite] = useState<number>(5)
+  const [pesquisa, setPesquisa] = useState<string>("")
 
   useEffect(()=> {
     async function getItens() {
@@ -19,9 +21,20 @@ export default function Home() {
       }
       const response = await axios.get(`https://rest.coincap.io/v3/assets?limit=${limite}&offset=0&apiKey=${chave}`)
       setLista(response.data.data)
+      setListaMostrada(response.data.data)
     }
     getItens()
   }, [limite])
+
+  useEffect(()=> {
+    let texto = pesquisa.trim()
+    if(!texto || texto === "") {
+      setListaMostrada(lista)
+    }
+    setListaMostrada(lista?.filter((item)=> {
+      return item.name.toLowerCase().includes(texto.toLocaleLowerCase())
+    }))
+  }, [pesquisa])
 
   function aumentarLimite() {
     setLimite(limite + 5)
@@ -33,8 +46,8 @@ export default function Home() {
 
   return (
     <>
-      <Pesquisa />
-      <Listagem lista={lista} />
+      <Pesquisa pesquisa={pesquisa} setPesquisa={setPesquisa} />
+      <Listagem lista={listaMostrada} />
       <div className="container">
         { limite > 5 && (
           <button onClick={diminuirLimite} >Ver menos</button>
