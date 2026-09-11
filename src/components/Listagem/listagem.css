@@ -82,6 +82,9 @@ div.imagem-texto:hover {
     border-bottom: 1px solid #ffffff6e;
     text-align: right;
     padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   div.imagem-texto {
