@@ -54,7 +54,9 @@ export default function Listagem({ lista }: ListagemProps) {
               <tr key={item.id}>
                 <td onClick={()=>abrirCard(item)} data-label="Moeda">
                   <div className="imagem-texto"> 
-                    <img src={`https://assets.coincap.io/assets/icons/${item.symbol.toLowerCase()}@2x.png`} /> 
+                    <img 
+                      alt={`Ícone da criptomoeda ${item.name}`}
+                      src={`https://assets.coincap.io/assets/icons/${item.symbol.toLowerCase()}@2x.png`} /> 
                     {item.name}
                   </div>
                 </td>

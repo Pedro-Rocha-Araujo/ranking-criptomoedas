@@ -11,7 +11,10 @@ export default function Card( { cripto, fecharCard }: cardProps ) {
     <div className="background">
       <div className="card">
         <div className="header">
-          <img src={`https://assets.coincap.io/assets/icons/${cripto.symbol.toLowerCase()}@2x.png`} />
+          <img 
+            alt={`Ícone da criptomoeda ${cripto.name}`}
+            src={`https://assets.coincap.io/assets/icons/${cripto.symbol.toLowerCase()}@2x.png`} 
+          />
           <h1>{cripto.name}</h1>
         </div>
         <div className="infos">
